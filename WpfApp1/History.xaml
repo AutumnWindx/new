@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp1.History"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="History" Height="450" Width="800">
+    <Grid>
+        <DataGrid Name="ReadyTask" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" SelectionChanged="ReadyTask_SelectionChanged" Margin="152,72,152,27">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название задачи" Width="200" Binding="{Binding Title}"/>
+                <DataGridTextColumn Header="Описание задачи" Width="200" Binding="{Binding Desk}"/>
+                <DataGridTextColumn Header="Статус задачи" Width="90" Binding="{Binding IdStatusTaskNavigation.Title}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="История выполненных задач" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="25"/>
+        <Button Content="Назад" HorizontalAlignment="Left"
+                Margin="30,10,0,0" VerticalAlignment="Top" 
+                RenderTransformOrigin="-0.055,0.082" Name="BackBtn"
+                Click="BackBtn_Click" Width="56" Height="37"/>
+    </Grid>
+</Window>

@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApp1.Distributor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Distributor" Height="450" Width="500">
+    <Grid Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="127"/>
+            <ColumnDefinition Width="226.133"/>
+            <ColumnDefinition Width="151.867"/>
+            <ColumnDefinition Width="67"/>
+            <ColumnDefinition Width="53"/>
+            <ColumnDefinition Width="18"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="33"></RowDefinition>
+            <RowDefinition Height="31.822"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="List" Content="Список пользователей" Grid.Column="1" Grid.Row="3" Click="List_Click" Grid.ColumnSpan="2" Margin="109,159,112,122"></Button>
+        <Button Name="ProfileBtn" Content="Мой профиль" Grid.Column="1" Click="ProfileBtn_Click" Margin="136,8,122,278" Grid.Row="3" Grid.ColumnSpan="2"/>
+
+
+        <Button Name="SearchBtn" Content="Посмотреть задачи" HorizontalAlignment="Left" Click="SearchBtn_Click" Margin="67,34,0,255" Grid.Row="3" Grid.ColumnSpan="2"/>
+        <Button Name="back" Grid.Column="1" Content="Выход" HorizontalAlignment="Left" Margin="206,256,0,0" Grid.Row="3" VerticalAlignment="Top" Height="45" Width="113" Click="back_Click" Grid.ColumnSpan="2" RenderTransformOrigin="0.506,0.142"/>
+    </Grid>
+</Window>

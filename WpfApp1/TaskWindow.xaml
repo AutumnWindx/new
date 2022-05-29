@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApp1.TaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="TaskWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Background="White" FontFamily="Verdana" FontSize="20" FontWeight="Bold" Margin="174,41,50,328"/>
+        <TextBlock Text="{Binding Desk}" TextWrapping="Wrap" Grid.Column="0" Background="White" FontFamily="Verdana" FontSize="15" Margin="206,127,296,181"/>
+        <Button Name="AcceptBtn" Content="Принять задание" Click="AcceptBtn_Click" Margin="10,248,627,143"/>
+
+        <Button Content="Назад" HorizontalAlignment="Left"
+                Margin="30,10,0,0" VerticalAlignment="Top" 
+                RenderTransformOrigin="-0.055,0.082" Name="BackBtn"
+                Click="BackBtn_Click" Width="56" Height="37"/>
+    </Grid>
+</Window>
+    
